@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tartaruga Marinha</title>
+    <link rel="stylesheet" href="styleMarine.css">
+
+    <link rel="shortcut icon" href="pixels/tartarugaPixelada.png" type="image/x-icon">
+</head>
+<body>
+     <header class="main-header">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="photos.html">Fotos</a></li>
+                <li><a href="game.html">Game Marinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="gameContainer">
+        <!-- Tela de início -->
+        <div id="startScreen" class="screen">
+            <div class="title-container">
+                <h1 class="game-title">🐢 Tartaruga Marinha</h1>
+                <p class="game-subtitle">Ajude a tartaruga a limpar o oceano!</p>
+            </div>
+            <div class="instructions">
+                <p>🎯 Colete moedas de ouro</p>
+                <p>🚫 Evite o lixo marinho</p>
+                <p>⌨️ Use as setas ou toque na tela</p>
+            </div>
+            <button id="startButton" class="game-button">Começar Jogo</button>
+        </div>
+
+        <!-- Tela do jogo -->
+        <div id="gameScreen" class="screen hidden">
+            <div id="gameUI">
+                <div class="score-container">
+                    <span class="score-label">Pontuação:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="lives-container">
+                    <span class="lives-label">Vidas:</span>
+                    <div id="lives">
+                        <span class="heart">❤️</span>
+                        <span class="heart">❤️</span>
+                        <span class="heart">❤️</span>
+                    </div>
+                </div>
+            </div>
+            
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <!-- Controles móveis -->
+            <div id="mobileControls" class="mobile-controls">
+                <button id="upBtn" class="control-btn">↑</button>
+                <div class="horizontal-controls">
+                    <button id="leftBtn" class="control-btn">←</button>
+                    <button id="downBtn" class="control-btn">↓</button>
+                    <button id="rightBtn" class="control-btn">→</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de game over -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="game-over-container">
+                <h2 class="game-over-title">Fim de Jogo!</h2>
+                <div class="final-score-container">
+                    <p class="final-score-label">Pontuação Final:</p>
+                    <p id="finalScore" class="final-score">0</p>
+                </div>
+                <div class="game-over-message">
+                    <p id="gameOverMessage">Você ajudou a limpar o oceano!</p>
+                </div>
+                <div class="game-over-buttons">
+                    <button id="restartButton" class="game-button">Jogar Novamente</button>
+                    <button id="menuButton" class="game-button secondary">Menu Principal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Áudio -->
+    <audio id="coinSound" preload="auto">
+        <source src="assets/audio/coin_sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="collisionSound" preload="auto">
+        <source src="assets/audio/collision_sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="scriptGame.js"></script>
+</body>
+</html>
+

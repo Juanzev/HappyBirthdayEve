@@ -1,0 +1,59 @@
+/* Remove margem e padding padrão da página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garante que o body e html ocupem a tela toda */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* evita rolagem */
+  font-family: sans-serif;
+}
+
+/* Vídeo de fundo cobrindo tudo */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* Cobre toda a tela */
+  object-position: center center;
+  z-index: -1;
+}
+
+/* Conteúdo que aparece por cima do vídeo */
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* fundo semitransparente */
+  padding: 2rem;
+  text-align: center;
+  max-width: 90%;
+  width: 600px;
+  margin: 5vh auto 0;
+  border-radius: 12px;
+}
+
+.video-dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* ajuste a opacidade aqui */
+  z-index: 0;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .overlay {
+    padding: 1rem;
+    font-size: 0.95rem;
+    margin-top: 15vh;
+  }
+}

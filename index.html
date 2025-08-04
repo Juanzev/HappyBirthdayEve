@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="pixels/baleiaPixelada.png" type="image/x-icon">
+    <title>Site com Baleia Interativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animais.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="photos.html">Fotos</a></li>
+                <li><a href="game.html">Game Marinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <main>
+        <section id="home" class="hero">
+            <!--quimera, tubarao baleia, tartaruga, polvo, baleia jubarte-->
+            <div class="image-container">
+                <a href="animais/quimera.html"><img src="pixels/quimeraPixelado.png" alt="quimera" class="img1"></a>
+
+                <a href="animais/tubarãoBaleia.html"><img src="pixels/tubaraoBaleiaPixelado.png" alt="tubarao baleia" class="img2"></a>
+
+                <a href="animais/tartaruga.html"><img src="pixels/tartarugaPixelada.png" alt="tartaruga" class="img3"></a>
+
+                <a href="animais/polvo.html"><img src="pixels/polvoPixelado.png" alt="polvo" class="img4"></a>
+
+                <a href="animais/baleiaJubarte.html"><img src="pixels/jubartePixelada.png" alt="baleia jubarte" class="img5"></a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Baleia interativa -->
+    <div id="whale-container">
+        <img id="whale" class="whale" src="output-onlinegiftools-com(1).gif" alt="Baleia Azul">
+    </div>
+
+    <!-- Caixa de texto que aparece quando a baleia é clicada -->
+    <div id="text-box" class="text-box hidden">
+        <div class="text-box-header">
+            <h3>Mensagem da moby</h3>
+            <button id="close-text-box">&times;</button>
+        </div>
+        <div class="text-box-content">
+            <p id="whale-message">Olá Eve, sou a moby, baleia criada pelo Juan 😃, ele te Deixou a seguinte mensagem: Feliz aniversário Eveee, saiba que você é muito especial pra mim e que eu nunca me arrependi e nunca vou me arrepender de ter conhecido essa garota incrível que você é, fiz esse site no intuido de mostrar seus animais marinhos favoritos e como as características deles me lembram você, saiba que gosto muito de você e sempre vai poder contar comigo 😁.
+            <br>
+            <br>
+            moby: essa foi a mensagem do Juan, aproveite seu dia e seu site Eve 🥳🥳🥳 parabéns evee.
+            </p>
+        </div>
+    </div>
+
+    <!-- Overlay para quando a caixa de texto estiver aberta -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
